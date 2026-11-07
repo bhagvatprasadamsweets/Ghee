@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #164E3D;
+  --color-forest-900: #0d2e24;
+  --color-forest-800: #123e31;
+  --color-forest-700: #164E3D;
+  --color-forest-600: #1e6650;
+  --color-forest-500: #298367;
+  --color-forest-100: #e2ede8;
+  --color-forest-50: #f1f7f4;
+
+  --color-gold: #D8B879;
+  --color-gold-light: #eeddb7;
+  --color-gold-dark: #b89349;
+  --color-gold-deep: #8f6f2f;
+
+  --color-cream: #FAF8F1;
+  --color-cream-card: #FFFFFF;
+  --color-cream-subtle: #F6F4EB;
+  --color-accent: #E9DFC8;
+
+  --color-charcoal: #252A24;
+  --color-charcoal-muted: #5e665c;
+  --color-charcoal-light: #8b948a;
+
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: #252A24;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #252A24;
+  }
+
+  /* Prevent text words or long strings from overflowing screens */
+  h1, h2, h3, h4, h5, h6, p, span, a, li, button, td, th {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  img, video, svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ::selection {
+    background-color: rgba(216, 184, 121, 0.35);
+    color: #164E3D;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF8F1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D8B879;
+    border-radius: 4px;
+  }
+}
+
+/* Utilities for animations and hiding scrollbars */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
