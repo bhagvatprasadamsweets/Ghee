@@ -6,6 +6,7 @@ import {
   ChevronDown 
 } from 'lucide-react';
 import { BRAND_INFO } from '../data/gheeData';
+import AppPromoBanner from './AppPromoBanner';
 
 export default function Footer({ onOpenInquiry, onOpenPolicy }) {
   // Mobile accordion state (all closed by default)
@@ -120,13 +121,13 @@ export default function Footer({ onOpenInquiry, onOpenPolicy }) {
               <ul className="space-y-2 text-xs text-[#555F58]">
                 {policyLinks.map((policy) => (
                   <li key={policy.name}>
-                    <button
-                      type="button"
+                    <a
+                      href={policy.href}
                       onClick={(e) => handlePolicyClick(e, policy.type)}
-                      className="hover:text-[#164E3D] font-medium transition-colors text-left"
+                      className="hover:text-[#164E3D] font-medium transition-colors text-left inline-block"
                     >
                       {policy.name}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -159,8 +160,8 @@ export default function Footer({ onOpenInquiry, onOpenPolicy }) {
 
                 <div className="flex items-center gap-2.5">
                   <Mail className="w-4 h-4 text-[#164E3D] shrink-0" />
-                  <a href={`mailto:${BRAND_INFO.email}`} className="hover:text-[#164E3D] font-medium">
-                    {BRAND_INFO.email}
+                  <a href="mailto:info@megascale.in" className="hover:text-[#164E3D] font-medium transition-colors">
+                    info@megascale.in
                   </a>
                 </div>
 
@@ -193,10 +194,20 @@ export default function Footer({ onOpenInquiry, onOpenPolicy }) {
           </div>
         </div>
 
+        <AppPromoBanner variant="footer" className="mb-1" />
+
         {/* Bottom Copyright */}
         <div className="pt-1 text-center sm:text-left text-[11px] text-[#7A847E]">
           <div>
-            &copy; 2026 Bhagvat Prasadam Ghee. All rights reserved. Powered by Megascale
+            &copy; 2026 Bhagvat Prasadam Ghee. All rights reserved. Powered by{' '}
+            <a
+              href="https://www.megascale.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#164E3D] font-semibold hover:underline"
+            >
+              Megascale
+            </a>
           </div>
         </div>
 

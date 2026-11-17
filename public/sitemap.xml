@@ -1,58 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vedicamritghee.com/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vedicamritghee.com/images/gau-dham-bilona.jpg</image:loc>
+      <image:title>Bhagvat Prasadam Gau Dham Traditional Desi Cow Ghee</image:title>
+      <image:caption>100% Pure Vedic A2 Bilona Churned Gir Cow Ghee</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vedicamritghee.com/images/traditional-bilona-farm.jpg</image:loc>
+      <image:title>Bhagvat Prasadam Pure Gir Cow Ghee</image:title>
+      <image:caption>Handcrafted from Sacred Indigenous Gir Cows Rich in A2 Beta Casein</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://vedicamritghee.com/#products</loc>
-    <lastmod>2026-11-03</lastmod>
+    <loc>https://vedicamritghee.com/products/gau-dham-traditional-desi-cow-ghee</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vedicamritghee.com/images/gau-dham-bilona.jpg</image:loc>
+      <image:title>Gau Dham Traditional Desi Cow Ghee</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://vedicamritghee.com/#specifications</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedicamritghee.com/#why-us</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedicamritghee.com/#process</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedicamritghee.com/#culinary</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedicamritghee.com/#gallery</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vedicamritghee.com/#faq</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vedicamritghee.com/#contact</loc>
-    <lastmod>2026-11-03</lastmod>
+    <loc>https://vedicamritghee.com/products/pure-gir-cow-ghee</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vedicamritghee.com/images/traditional-bilona-farm.jpg</image:loc>
+      <image:title>Pure Gir Cow Ghee</image:title>
+    </image:image>
   </url>
 </urlset>
-

@@ -149,9 +149,9 @@ export default function PolicyModal({ isOpen, policyType, onClose }) {
             <span className="text-[10px] sm:text-[11px] font-bold text-[#164E3D] uppercase tracking-widest block">
               Bhagvat Prasadam Legal &amp; Trust
             </span>
-            <h1 id="policy-modal-title" className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#164E3D] leading-tight">
+            <h2 id="policy-modal-title" className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#164E3D] leading-tight">
               {activePolicy.title}
-            </h1>
+            </h2>
           </div>
         </div>
 

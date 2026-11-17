@@ -41,9 +41,9 @@ export default function FAQ() {
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-base sm:text-lg font-bold text-[#164E3D] leading-snug">
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#164E3D] leading-snug">
                     {faq.question}
-                  </span>
+                  </h3>
                   <span 
                     className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${
                       isOpen ? 'bg-[#164E3D] text-white rotate-180' : 'bg-[#FAF8F1] text-[#164E3D]'

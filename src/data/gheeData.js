@@ -7,7 +7,7 @@ export const BRAND_INFO = {
   phoneDisplay: "+91 98765 43210",
   whatsapp: "919876543210",
   whatsappDisplay: "+91 98765 43210",
-  email: "inquiry@vedicamritghee.com",
+  email: "info@megascale.in",
   address: "Vedic Amrit Organic Gaushala, Gir Somnath Foothills, Talala Gir, Gujarat - 362150, India",
   hours: "Monday - Sunday: 8:00 AM - 8:00 PM IST",
   fssaiNumber: "10723031000452",

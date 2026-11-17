@@ -43,6 +43,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 116px;
     font-family: var(--font-sans);
     background-color: #FFFFFF;
     color: #252A24;

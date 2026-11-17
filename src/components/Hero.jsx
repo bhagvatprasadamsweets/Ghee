@@ -40,7 +40,7 @@ const VARIETIES = [
   },
 ];
 
-export default function Hero({ onOpenInquiry }) {
+export default function Hero({ onOpenInquiry, onOpenInquiryModal }) {
   const [selected, setSelected] = useState(0);
   const variety = VARIETIES[selected];
 
@@ -125,24 +125,34 @@ export default function Hero({ onOpenInquiry }) {
                 </div>
               </div>
 
+              {/* ── Promotional Free Shipping Badges (Placed right above buttons) ── */}
+              <div className="flex flex-wrap items-center gap-2 pt-2 text-[11px] sm:text-xs text-[#164E3D] font-semibold w-full">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FAF5EB] border border-[#E9DFC8] text-[#164E3D]">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#164E3D] shrink-0" />
+                  <span>Free Shipping above ₹999</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FAF5EB] border border-[#E9DFC8] text-[#164E3D]">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#164E3D] shrink-0" />
+                  <span>First Order: Free Shipping above ₹599</span>
+                </span>
+              </div>
+
               {/* ── Action Buttons ── */}
-              <div className="flex flex-wrap items-center gap-3 pt-2 w-full">
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    if (onOpenInquiry) {
+              <div className="flex flex-wrap items-center gap-3 pt-1 w-full">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (onOpenInquiryModal) {
+                      onOpenInquiryModal(variety.name);
+                    } else if (onOpenInquiry) {
                       onOpenInquiry(variety.name);
-                    } else {
-                      const el = document.getElementById('contact');
-                      if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-lg bg-[#164E3D] hover:bg-[#103B2F] text-white font-bold text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-md hover:shadow-lg"
+                  className="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-lg bg-[#164E3D] hover:bg-[#103B2F] text-white font-bold text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
                 >
-                  <span>INQUIRE NOW</span>
+                  <span>INQUIRY FORM</span>
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </button>
 
                 {/* Buy Now button dynamically linking to the selected product URL */}
                 <a
@@ -193,7 +203,7 @@ export default function Hero({ onOpenInquiry }) {
       {/* Full-width banner below hero content */}
       <div className="w-full max-w-full overflow-hidden leading-none bg-[#dce9c8]">
         <img
-          src="/images/pure-gir-cow-ghee-banner.png"
+          src="/images/pure-gir-cow-ghee-banner.jpg"
           alt="Pure Gir Cow Ghee 100% Natural & Pure Traditional Vedic Process"
           onError={handleImageError}
           className="w-full h-auto object-contain object-center block"

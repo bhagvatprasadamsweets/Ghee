@@ -1,9 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Menu, X } from 'lucide-react';
+import AppPromoBanner from './AppPromoBanner';
+
+const announcements = [
+  'FREE SHIPPING ON ORDERS ABOVE ₹999',
+  'FREE SHIPPING ON YOUR FIRST ORDER ABOVE ₹599',
+];
 
 export default function Navbar({ onOpenInquiry }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeAnnounceIndex, setActiveAnnounceIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  // Smooth rotation between free shipping offers
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setActiveAnnounceIndex((prev) => (prev + 1) % announcements.length);
+        setFade(true);
+      }, 300);
+    }, 3800);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10);
@@ -28,17 +48,33 @@ export default function Navbar({ onOpenInquiry }) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full">
-      {/* ── Main navbar ──────────────────────────────────────── */}
+    <header className="fixed top-0 left-0 right-0 z-50 w-full shadow-sm">
+      {/* ── Line 1: Rotating Free Shipping Announcement Bar (Dark Green Theme) ── */}
+      <div className="w-full bg-[#164E3D] text-white py-0.5 px-3 text-[9.5px] sm:text-[10.5px] font-bold uppercase tracking-wider text-center select-none overflow-hidden leading-tight">
+        <div className="max-w-7xl mx-auto flex items-center justify-center min-h-[16px]">
+          <span
+            className={`transition-opacity duration-300 ease-in-out inline-flex items-center ${
+              fade ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <span>{announcements[activeAnnounceIndex]}</span>
+          </span>
+        </div>
+      </div>
+
+      {/* ── Line 2: Mobile App Discount Banner (Dark Green Theme) ── */}
+      <AppPromoBanner variant="header" />
+
+      {/* ── Line 3: Main Navbar (White Background, Balanced 70px) ── */}
       <nav
         className={`w-full bg-white border-b border-[#DCE7E0] transition-shadow duration-300 ${
-          isScrolled ? 'shadow-md' : 'shadow-sm'
+          isScrolled ? 'shadow-md' : 'shadow-none'
         }`}
       >
         <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="h-[60px] flex items-center justify-between gap-2 sm:gap-4 w-full">
+          <div className="h-[70px] flex items-center justify-between gap-2 sm:gap-4 w-full">
 
-            {/* LEFT: Brand Logo */}
+            {/* LEFT: Brand Logo (Balanced ~50px height) */}
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
@@ -47,7 +83,11 @@ export default function Navbar({ onOpenInquiry }) {
               <img
                 src="/images/brand-logo.png"
                 alt="Bhagvat Prasadam Ghee Logo"
-                className="h-10 sm:h-13 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-200"
+                width="160"
+                height="56"
+                loading="eager"
+                decoding="async"
+                className="h-11 sm:h-[50px] w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-200"
               />
             </a>
 

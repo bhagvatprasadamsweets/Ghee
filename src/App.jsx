@@ -22,6 +22,13 @@ export default function App() {
   const [labReportModalOpen, setLabReportModalOpen] = useState(false);
   const [policyModalType, setPolicyModalType] = useState(null);
 
+  // Trigger inquiry modal with selected product
+  const handleOpenInquiryModal = (productName = 'Pure Gir Cow Ghee', packSize = '1000 ML') => {
+    setInquiryProduct(productName);
+    setInquiryPackSize(packSize);
+    setInquiryModalOpen(true);
+  };
+
   // Trigger inquiry: smooth scroll to #contact section with prefilled product
   const handleOpenInquiry = (productName = 'Pure Gir Cow Ghee', packSize = '1000 ML') => {
     setInquiryProduct(productName);
@@ -46,11 +53,12 @@ export default function App() {
           HOME | WHAT IS GHEE | HOW IT IS MADE | PURITY PROMISE | FAQ | CONTACT */}
       <Navbar onOpenInquiry={() => handleOpenInquiry()} />
 
-      {/* Main Page Sections — with pt-[60px] to offset fixed top navbar */}
-      <main className="w-full max-w-full overflow-x-hidden flex-1 pt-[60px]">
+      {/* Main Page Sections — offset for top announcement bar + app promo + 70px navbar (~106px) */}
+      <main className="w-full max-w-full overflow-x-hidden flex-1 pt-[106px]">
         {/* 1. HOME (#home) */}
         <Hero 
           onOpenInquiry={handleOpenInquiry} 
+          onOpenInquiryModal={handleOpenInquiryModal}
           onOpenLabReport={handleOpenLabReport}
         />
 
