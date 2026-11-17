@@ -1,84 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="#164E3D" />
 
-    <!-- Browser Compatibility Polyfill for crypto.randomUUID on HTTP / Local IP / Chrome Extensions -->
-    <script>
-      if (typeof window !== 'undefined') {
-        if (!window.crypto) {
-          window.crypto = {};
-        }
-        if (!window.crypto.randomUUID) {
-          window.crypto.randomUUID = function () {
-            return '10000000-1000-4000-8000-100000000000'.replace(/[018]/g, function (c) {
-              return (
-                c ^
-                ((window.crypto.getRandomValues
-                  ? window.crypto.getRandomValues(new Uint8Array(1))[0]
-                  : Math.floor(Math.random() * 256)) &
-                  (15 >> (c / 4)))
-              ).toString(16);
-            });
-          };
-        }
+<head>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NGFPQX9J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#164E3D" />
+
+  <!-- Browser Compatibility Polyfill for crypto.randomUUID on HTTP / Local IP / Chrome Extensions -->
+  <script>
+    if (typeof window !== 'undefined') {
+      if (!window.crypto) {
+        window.crypto = {};
       }
-    </script>
+      if (!window.crypto.randomUUID) {
+        window.crypto.randomUUID = function () {
+          return '10000000-1000-4000-8000-100000000000'.replace(/[018]/g, function (c) {
+            return (
+              c ^
+              ((window.crypto.getRandomValues
+                ? window.crypto.getRandomValues(new Uint8Array(1))[0]
+                : Math.floor(Math.random() * 256)) &
+                (15 >> (c / 4)))
+            ).toString(16);
+          });
+        };
+      }
+    }
+  </script>
 
-    <!-- Primary SEO Title & Meta Description -->
-    <title>Bhagvat Prasadam Ghee | Pure Vedic A2 Gir Cow Bilona Ghee</title>
-    <meta
-      name="description"
-      content="Buy authentic Bhagvat Prasadam Gau Dham Traditional Desi Cow Ghee and Pure Gir Cow Ghee handcrafted via ancient Vedic Bilona method. 100% pure A2 Gir cow milk, cultured curd, wooden Valona churned, NABL lab certified."
-    />
-    <meta
-      name="keywords"
-      content="desi cow ghee, a2 gir cow ghee, bilona ghee, pure cow ghee, gau dham ghee, vedic ghee, traditional bilona ghee, gir cow a2 ghee, organic cow ghee, bhagvat prasadam ghee, shuddh ghee"
-    />
-    <meta name="author" content="Bhagvat Prasadam Ghee" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <!-- Primary SEO Title & Meta Description -->
+  <title>Bhagvat Prasadam Ghee | Pure Vedic A2 Gir Cow Bilona Ghee</title>
+  <meta name="description"
+    content="Buy authentic Bhagvat Prasadam Gau Dham Traditional Desi Cow Ghee and Pure Gir Cow Ghee handcrafted via ancient Vedic Bilona method. 100% pure A2 Gir cow milk, cultured curd, wooden Valona churned, NABL lab certified." />
+  <meta name="keywords"
+    content="desi cow ghee, a2 gir cow ghee, bilona ghee, pure cow ghee, gau dham ghee, vedic ghee, traditional bilona ghee, gir cow a2 ghee, organic cow ghee, bhagvat prasadam ghee, shuddh ghee" />
+  <meta name="author" content="Bhagvat Prasadam Ghee" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://vedicamritghee.com/" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://vedicamritghee.com/" />
 
-    <!-- Favicon & Icons -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23164E3D'/><circle cx='50' cy='50' r='38' fill='none' stroke='%23D8B879' stroke-width='3'/><path d='M50 20 C35 38 32 54 32 64 C32 74 40 82 50 82 C60 82 68 74 68 64 C68 54 65 38 50 20 Z' fill='%23D8B879'/><circle cx='50' cy='60' r='8' fill='%23FAF8F1'/></svg>" />
-    <link rel="apple-touch-icon" href="/images/brand-logo.png" />
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23164E3D'/><circle cx='50' cy='50' r='38' fill='none' stroke='%23D8B879' stroke-width='3'/><path d='M50 20 C35 38 32 54 32 64 C32 74 40 82 50 82 C60 82 68 74 68 64 C68 54 65 38 50 20 Z' fill='%23D8B879'/><circle cx='50' cy='60' r='8' fill='%23FAF8F1'/></svg>" />
+  <link rel="apple-touch-icon" href="/images/brand-logo.png" />
 
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Bhagvat Prasadam Ghee" />
-    <meta property="og:url" content="https://vedicamritghee.com/" />
-    <meta property="og:title" content="Bhagvat Prasadam Ghee | Pure Vedic A2 Gir Cow Bilona Ghee" />
-    <meta
-      property="og:description"
-      content="Authentic Vedic A2 Bilona Churned Pure Desi Cow Ghee from sacred indigenous Gir cows. Cultured whole curd, hand-churned with wooden Valona, 100% natural golden danedar prana."
-    />
-    <meta property="og:image" content="https://vedicamritghee.com/images/gau-dham-bilona.jpg" />
-    <meta property="og:image:secure_url" content="https://vedicamritghee.com/images/gau-dham-bilona.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="800" />
-    <meta property="og:image:alt" content="Bhagvat Prasadam Gau Dham Traditional Desi Cow Ghee" />
-    <meta property="og:locale" content="en_IN" />
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bhagvat Prasadam Ghee" />
+  <meta property="og:url" content="https://vedicamritghee.com/" />
+  <meta property="og:title" content="Bhagvat Prasadam Ghee | Pure Vedic A2 Gir Cow Bilona Ghee" />
+  <meta property="og:description"
+    content="Authentic Vedic A2 Bilona Churned Pure Desi Cow Ghee from sacred indigenous Gir cows. Cultured whole curd, hand-churned with wooden Valona, 100% natural golden danedar prana." />
+  <meta property="og:image" content="https://vedicamritghee.com/images/gau-dham-bilona.jpg" />
+  <meta property="og:image:secure_url" content="https://vedicamritghee.com/images/gau-dham-bilona.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="Bhagvat Prasadam Gau Dham Traditional Desi Cow Ghee" />
+  <meta property="og:locale" content="en_IN" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@BhagvatPrasadam" />
-    <meta name="twitter:creator" content="@BhagvatPrasadam" />
-    <meta name="twitter:title" content="Bhagvat Prasadam Ghee | Pure Vedic A2 Gir Cow Bilona Ghee" />
-    <meta
-      name="twitter:description"
-      content="Authentic Vedic A2 Bilona Churned Pure Desi Cow Ghee from sacred indigenous Gir cows. 100% natural aroma and rich golden danedar grains."
-    />
-    <meta name="twitter:image" content="https://vedicamritghee.com/images/gau-dham-bilona.jpg" />
-    <meta name="twitter:image:alt" content="Bhagvat Prasadam Vedic A2 Gir Cow Ghee" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@BhagvatPrasadam" />
+  <meta name="twitter:creator" content="@BhagvatPrasadam" />
+  <meta name="twitter:title" content="Bhagvat Prasadam Ghee | Pure Vedic A2 Gir Cow Bilona Ghee" />
+  <meta name="twitter:description"
+    content="Authentic Vedic A2 Bilona Churned Pure Desi Cow Ghee from sacred indigenous Gir cows. 100% natural aroma and rich golden danedar grains." />
+  <meta name="twitter:image" content="https://vedicamritghee.com/images/gau-dham-bilona.jpg" />
+  <meta name="twitter:image:alt" content="Bhagvat Prasadam Vedic A2 Gir Cow Ghee" />
 
-    <!-- Structured Data: Organization & Local Business Schema -->
-    <script type="application/ld+json">
+  <!-- Structured Data: Organization & Local Business Schema -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -104,8 +104,8 @@
       }
     </script>
 
-    <!-- Structured Data: Product Schema for Ghee Collection -->
-    <script type="application/ld+json">
+  <!-- Structured Data: Product Schema for Ghee Collection -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
         "@type": "Product",
@@ -133,8 +133,8 @@
       }
     </script>
 
-    <!-- Structured Data: FAQPage Schema for Rich Google Snippets -->
-    <script type="application/ld+json">
+  <!-- Structured Data: FAQPage Schema for Rich Google Snippets -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -167,58 +167,69 @@
       }
     </script>
 
-    <!-- Google Fonts with display=swap for zero render blocking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-white text-[#252A24] antialiased selection:bg-[#D8B879]/30 selection:text-[#164E3D]">
-    <!-- Accessible & SEO-Optimized Semantic Pre-render for Crawlers -->
-    <header class="sr-only">
-      <h1>Bhagvat Prasadam Ghee | Gau Dham Traditional Desi Cow Ghee &amp; Pure Gir Cow Ghee</h1>
-      <p>100% Pure Vedic A2 Bilona Churned Cow Ghee handcrafted with Shastric devotion in India.</p>
-      <nav aria-label="Quick Sitemap Navigation">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">What Is Ghee</a></li>
-          <li><a href="#bilona-process">How Our Ghee Is Made (Bilona Process)</a></li>
-          <li><a href="#purity-promise">Our Promise of Purity</a></li>
-          <li><a href="#faq">Frequently Asked Questions</a></li>
-          <li><a href="#contact">Contact &amp; Wholesale Inquiry</a></li>
-          <li><a href="https://www.bhagvatprasadam.com/products/gau-dham-traditional-desi-cow-ghee?variant=46964366803093" target="_blank" rel="noopener noreferrer">Gau Dham Traditional Desi Cow Ghee</a></li>
-          <li><a href="https://www.bhagvatprasadam.com/products/ghee?variant=45385751920789" target="_blank" rel="noopener noreferrer">Pure Gir Cow Ghee</a></li>
-          <li><a href="https://www.bhagvatprasadam.com/" target="_blank" rel="noopener noreferrer">Bhagvat Prasadam Official Store</a></li>
-          <li><a href="#terms">Terms and Conditions</a></li>
-          <li><a href="#shipping">Shipping Policy</a></li>
-          <li><a href="#returns">Return Policy</a></li>
-          <li><a href="#privacy">Privacy Policy</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Google Fonts with display=swap for zero render blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <div id="root"></div>
+<body class="bg-white text-[#252A24] antialiased selection:bg-[#D8B879]/30 selection:text-[#164E3D]">
+  <!-- Accessible & SEO-Optimized Semantic Pre-render for Crawlers -->
+  <header class="sr-only">
+    <h1>Bhagvat Prasadam Ghee | Gau Dham Traditional Desi Cow Ghee &amp; Pure Gir Cow Ghee</h1>
+    <p>100% Pure Vedic A2 Bilona Churned Cow Ghee handcrafted with Shastric devotion in India.</p>
+    <nav aria-label="Quick Sitemap Navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">What Is Ghee</a></li>
+        <li><a href="#bilona-process">How Our Ghee Is Made (Bilona Process)</a></li>
+        <li><a href="#purity-promise">Our Promise of Purity</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#contact">Contact &amp; Wholesale Inquiry</a></li>
+        <li><a href="https://www.bhagvatprasadam.com/products/gau-dham-traditional-desi-cow-ghee?variant=46964366803093"
+            target="_blank" rel="noopener noreferrer">Gau Dham Traditional Desi Cow Ghee</a></li>
+        <li><a href="https://www.bhagvatprasadam.com/products/ghee?variant=45385751920789" target="_blank"
+            rel="noopener noreferrer">Pure Gir Cow Ghee</a></li>
+        <li><a href="https://www.bhagvatprasadam.com/" target="_blank" rel="noopener noreferrer">Bhagvat Prasadam
+            Official Store</a></li>
+        <li><a href="#terms">Terms and Conditions</a></li>
+        <li><a href="#shipping">Shipping Policy</a></li>
+        <li><a href="#returns">Return Policy</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <noscript>
-      <main style="padding: 24px; font-family: sans-serif; background: #FAF8F1; color: #164E3D;">
-        <h1>Bhagvat Prasadam Pure Traditional Vedic Desi Cow Ghee</h1>
-        <h2>Authentic A2 Gir Cow Bilona Ghee Collection</h2>
-        <p>Prepared using traditional Indian Shastric Bilona method from free grazing indigenous Gir cows. Cultured from whole curd (Dahi) overnight and hand churned with wooden Valona.</p>
-        <h3>Featured Varieties:</h3>
-        <ul>
-          <li><a href="https://www.bhagvatprasadam.com/products/gau-dham-traditional-desi-cow-ghee?variant=46964366803093">Gau Dham Traditional Desi Cow Ghee (30 Litres Cow Milk per 1 Litre Ghee)</a></li>
-          <li><a href="https://www.bhagvatprasadam.com/products/ghee?variant=45385751920789">Pure Gir Cow Ghee (A2 Beta Casein Rich from Sacred Indigenous Gir Herd)</a></li>
-        </ul>
-        <h3>Explore Our Website:</h3>
-        <ul>
-          <li><a href="#about">What Is Ghee &amp; Truth Behind Pure Butter</a></li>
-          <li><a href="#bilona-process">6 Step Vedic Bilona Churning Process</a></li>
-          <li><a href="#purity-promise">Our Promise of Purity &amp; NABL Lab Certification</a></li>
-          <li><a href="#faq">Frequently Asked Questions About Vedic Ghee</a></li>
-          <li><a href="#contact">Contact Us &amp; Bulk Inquiry</a></li>
-        </ul>
-      </main>
-    </noscript>
+  <div id="root"></div>
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <noscript>
+    <main style="padding: 24px; font-family: sans-serif; background: #FAF8F1; color: #164E3D;">
+      <h1>Bhagvat Prasadam Pure Traditional Vedic Desi Cow Ghee</h1>
+      <h2>Authentic A2 Gir Cow Bilona Ghee Collection</h2>
+      <p>Prepared using traditional Indian Shastric Bilona method from free grazing indigenous Gir cows. Cultured from
+        whole curd (Dahi) overnight and hand churned with wooden Valona.</p>
+      <h3>Featured Varieties:</h3>
+      <ul>
+        <li><a
+            href="https://www.bhagvatprasadam.com/products/gau-dham-traditional-desi-cow-ghee?variant=46964366803093">Gau
+            Dham Traditional Desi Cow Ghee (30 Litres Cow Milk per 1 Litre Ghee)</a></li>
+        <li><a href="https://www.bhagvatprasadam.com/products/ghee?variant=45385751920789">Pure Gir Cow Ghee (A2 Beta
+            Casein Rich from Sacred Indigenous Gir Herd)</a></li>
+      </ul>
+      <h3>Explore Our Website:</h3>
+      <ul>
+        <li><a href="#about">What Is Ghee &amp; Truth Behind Pure Butter</a></li>
+        <li><a href="#bilona-process">6 Step Vedic Bilona Churning Process</a></li>
+        <li><a href="#purity-promise">Our Promise of Purity &amp; NABL Lab Certification</a></li>
+        <li><a href="#faq">Frequently Asked Questions About Vedic Ghee</a></li>
+        <li><a href="#contact">Contact Us &amp; Bulk Inquiry</a></li>
+      </ul>
+    </main>
+  </noscript>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
